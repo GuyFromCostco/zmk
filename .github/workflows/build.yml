@@ -47,6 +47,7 @@ jobs:
           - lily58_right
           - microdox_left
           - microdox_right
+          - murphpad
           - nibble
           - qaz
           - quefrency_left
@@ -61,7 +62,6 @@ jobs:
           - splitreus62_right
           - tg4x
           - tidbit
-        -murphpad
         cmake-args: [""]
         include:
           - board: bdn9_rev2
