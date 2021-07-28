@@ -47,6 +47,7 @@ jobs:
           - lily58_right
           - microdox_left
           - microdox_right
+          - murphpad
           - nibble
           - qaz
           - quefrency_left
@@ -109,14 +110,11 @@ jobs:
         run: |
           SHIELD_ARG=
           ARTIFACT_NAME="${{ matrix.board }}"
-
           if [ -n "${{ matrix.shield }}" ]; then
             SHIELD_ARG="-DSHIELD=${{ matrix.shield }}"
             ARTIFACT_NAME="${ARTIFACT_NAME}-${{ matrix.shield }}"
           fi
-
           ARTIFACT_NAME="${ARTIFACT_NAME}-zmk"
-
           echo ::set-output name=shield-arg::${SHIELD_ARG}
           echo ::set-output name=artifact-name::${ARTIFACT_NAME}
       - name: Build (west build)
